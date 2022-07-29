@@ -1,0 +1,112 @@
+#root {
+  overflow: hidden;
+  font-family: "Courier New", Courier, monospace;
+}
+h1 {
+  text-align: center;
+  color: #4d4639;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+
+  align-items: center;
+}
+.accordion {
+  margin-bottom: 300px;
+
+  width: 700px;
+}
+.item1 {
+  background-color: white;
+  margin-bottom: 5px;
+  padding: 5px 20px;
+  border: 1px solid gainsboro;
+  border-radius: 15px;
+}
+
+
+
+
+span {
+  margin-left: 30px;
+  color: black;
+}
+
+.title {
+  color: #85662b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.content {
+  color: #8b7f75;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.hr{
+display: none;
+}
+.hr.show{
+display: block;
+border-top: 1px solid rgb(230, 213, 213);
+margin-bottom: 25px;
+}
+
+.content.show {
+  height: auto;
+  max-height: 999px;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+@media only screen and (min-width: 350px) and (max-width: 390px) {
+  #root{
+    overflow: hidden;
+  }
+  .item1 {
+    margin-left: 15px;
+    width: 255px;
+
+    font-size: 15px;
+}
+  .accordion {
+    margin-top: 350px;
+  }
+}
+  
+@media only screen and (min-width: 391px) and (max-width: 601px) {
+ 
+  #root{
+    overflow: hidden;
+  }
+ 
+ 
+  .item1 {
+    margin-left: 13px;
+   
+
+    font-size: 15px;
+  }
+  
+  .item2 {
+    width: 300px;
+
+    margin-left: 25px;
+  }
+  .item2,
+  .text {
+    color: #85662b;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 15px;
+  }
+  .accordion {
+    margin-bottom: 100px;
+  }
+}
